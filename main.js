@@ -1,3 +1,5 @@
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
 function Counter({ item: { id, number }, hdlUpdate, hdlRemove }) {
   return (
     <div className='counter'>
@@ -11,7 +13,7 @@ function Counter({ item: { id, number }, hdlUpdate, hdlRemove }) {
 }
 
 function SumInfo(props) {
-  const { color, size, sum, hdlAddCounter } = props;
+  const {sum, hdlAddCounter } = props;
 
   return (
     <div className='suminfo'>
@@ -64,5 +66,3 @@ function App() {
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
